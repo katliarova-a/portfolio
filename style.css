@@ -1,0 +1,509 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 0.8vw;
+    
+}
+body{
+    background-color: #fbfbfe;
+    font-family:"Poppins", sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+header{
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: calc(16pt + 1.2rem);
+    font-weight: 700;
+}
+.logo{
+    margin-left: 20px;
+}
+.menu{
+    margin-right: 20px;
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menuMin{
+    display: none;
+}
+@media(max-width:1280px){
+    .menu{
+        display: none;
+    }
+    .menuMin{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .menuMin img{
+        height: auto;
+        width: 20%;
+    }
+}     
+
+.section{
+    width: 50vw;
+    height: 60vh;
+    margin-left: 25vw;
+    margin-top: 10vh;
+    display: flex;
+    position: relative;
+}
+
+.section_text{
+    width: 50%;
+    position: absolute;
+    top: 20%;
+}
+
+.sect.text{
+    font-size: 4.5rem;
+    font-weight: 700;
+    transform: translateX(-40%);
+    transition: 2s;
+    opacity: 0;
+}
+
+.sect.text.yes{
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.about_button{
+    transform: translateY(100%);
+    transition: 2s;
+    opacity: 0;
+}
+.about_button.yes{
+    transform: translateY(0%);
+    opacity: 1;
+}
+.web_sait{
+    transform: translateX(-80%);
+    transition: 2s;
+    opacity: 0;
+}
+
+.web_sait.yes{
+    transform: translateX(0%);
+    opacity: 1;
+}
+.section_text p{
+    color: gray;
+    font-size: 1.3rem;
+    width: 22rem;
+}
+.section_text h1+p{
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+.section_text button{
+    background-color: #6c56e0;
+    border: none;
+    padding: 1.5rem;
+    width: 35%;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 17px;
+    margin-top: 25px;
+}
+
+.section_text button:hover{
+    cursor: pointer;
+    opacity: .8;
+    transition: 1s;
+}
+.section_img{
+    width: 50%;
+    position: absolute;
+    right: 0;
+}
+
+#mask{
+    width: 80%;
+    position: absolute;
+    padding-top: 10%;
+    height: 27rem;
+    fill: #6c56e0;
+}
+
+.second_img{
+    width: 100%;
+    mask:                                                                                                                                                                                                                                                                                                                                                                                           url(#mask0);
+    position: relative;
+}
+
+.about_me{
+    width: 50vw;
+    height: 45vh;
+    margin-left: 25vw;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about_me h1{
+    font-size: 3rem;
+}
+
+.about_me p{
+    color: rgb(113, 112, 112);
+    font-size: 1.2rem;
+}
+
+.about_img{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2vw;
+
+}
+
+.non{
+    width: 45%;
+    height: 35vh; 
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.non img{
+    width: 80%;
+    height: 80%;
+    border-radius: 15px;
+}
+
+.about_text{
+   width: 38%;
+   display: flex;
+   margin-top: 1rem;
+   flex-direction: column;
+   margin-left: 5rem;
+}
+.about_text p{
+    color: rgb(91, 91, 91);
+    font-size: 1.3rem;
+    
+}
+
+.numer{
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 100%;
+    height: 4.8rem;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.numer div h1{
+    font-size: 2rem;
+}
+.numer div p{
+    font-size: 1.1rem;
+}
+
+.about_text button{
+    background-color: #6c56e0;
+    border: none;
+    padding: 1rem;
+    width: 40%;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 17px;
+    
+}
+
+.about_text button:hover{
+    cursor: pointer;
+    opacity: .8;
+    transition: 1s;
+}
+
+.skills{
+    width: 50vw;
+    margin-left: 25vw;
+    margin-top: 5vh;
+    display: flex;
+    margin-top: 10rem;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.skills h1{
+    font-size: 3rem;
+}
+
+.skills p{
+    color: rgb(113, 112, 112);
+    font-size: 1.2rem;
+}
+
+.skillsBox{
+    width: 80%;
+    height: auto;
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    
+}
+.column{
+    height: auto;
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    height: auto;
+}
+.jn{
+    height: 4.5rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.hoVeer{
+    height: 250px;
+}
+.clas{
+    height: 4.5em;
+    width: 100%;
+    display: flex;
+    
+}
+
+.jn_img{
+    width:2.5rem;
+    display: flex;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    justify-content: center;
+}
+
+.jn_img img{
+    width: 100%;
+    height: 100%;
+}
+
+.jn_text h1{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.jn_text{
+    position: relative;
+    width: 70%;
+}
+.jn_text p{
+    position: absolute;
+    bottom: 8px;
+    font-weight: 500;
+    color: rgb(167, 165, 165);
+    font-size: 1.3rem;
+}
+
+.svg_jn{
+    width:2rem;
+    display: flex;
+    justify-content: center;
+    padding-left: 2rem;
+}
+
+
+#masks{
+    transform: rotate(88deg);
+    fill: #6c56e0;
+    font-weight: bold;
+    padding-left: 1rem;
+    stroke: #6c56e0;
+    stroke-width: 5;
+}
+
+.skills_list{
+    display: none;
+    height: 0px;
+    transition: 5s;
+    width: 98%;
+    margin-top: 20px;
+}
+
+.active{
+    display: block;
+    height: 200px;
+}
+
+.skills_data{
+    width: 80%;
+    height: 30px;
+    margin-bottom: 20px;
+    padding-left: 67px;
+}
+
+.skills_title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills_title span{
+    font-size: 20px;
+}
+
+.skills_title p{
+    font-size: 1.25rem;
+    color: black;
+}
+
+.skills_bar{
+    background-color: #b6c1fc;
+    display: block;
+    margin-top: 5px;
+    width: 100%;
+
+}
+.skills_percentage{
+    height: 5px;
+    border-radius: 0.25rem;
+    width: 100%;
+    display: block;
+    background-color: #576ee0;
+    z-index: 10;
+}
+
+.skills_percentage1{
+    height: 5px;
+    border-radius: 0.25rem;
+    width: 80%;
+    display: block;
+    background-color: #576ee0;
+    z-index: 10;
+}
+.skills_percentage2{
+    height: 5px;
+    border-radius: 0.25rem;
+    width: 70%;
+    display: block;
+    background-color: #576ee0;
+    z-index: 10;
+}
+
+   
+
+
+.portfolio{
+    width: 50%;
+    height: 390px;
+    display: flex;
+    flex: 1 1 0;
+    justify-content: space-between;
+}
+
+.portfolio_item{
+    background-color: #fff;
+    border-radius: 5%;
+}
+
+.portfolio_item:hover{
+    cursor: pointer;
+    transition: 1s;
+    box-shadow: 0px 14px 12px #e4e9ff;
+}
+
+.portfolio_item img{
+    width: 95%;
+    margin-left: 5px;
+    height: 50%;
+    border-radius: 10px;
+}
+
+.portfolio_item h3{
+    font-size: 20px;
+    padding-top: 20px;
+    margin-left: 20px;
+}
+
+.portfolio_item p{
+    font-size: 16px;
+    padding-top: 10px;
+    width: 90%;
+    margin-left: 20px;
+    color: #787b88;
+}
+
+.portfolio_item button{
+    padding: 0.75rem 1rem;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    background-color:#576ee0;
+    border: none;
+    margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.portfolio_item button:hover{
+    cursor: pointer;
+    background-color: #4d62c7;
+}
+
+
+.main_container{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    margin-top: 5rem;
+
+    justify-content: center;
+}
+.gallery{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#slider{
+    width: 200%;
+    height: 80%;
+    transition: 2s;
+    transform: translateX(-0%);
+}
+
+.button_left,
+.butt_right{
+    width: 40px;
+    height: 40px;
+    margin-top: 15px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: 1s;
+}
+.butt_right:hover{
+    transform: scale(1.2)
+}
+.butons{
+    border: none;
+    background-color: transparent;
+}
+.button_left{
+    margin-right: 860px;
+    margin-left: 5px;
+    opacity: 4%;
+}
+.button_left:hover{
+    transform: scale(1.2);
+    
+}
